@@ -8,7 +8,9 @@
   For every class you need a new file. So every class is represented with files.
   For example if you have two class like cat and dog the formattin should be:
   
-  test/cat
+  test/cat<br />
   test/dog
-  train/cat
+
+  train/cat<br />
   train/dog
+  
