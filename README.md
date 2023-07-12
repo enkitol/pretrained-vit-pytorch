@@ -6,12 +6,3 @@
 
 ![alt text](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/vit_architecture.jpg)
 
-#    Usage
-
-<code>pretrained_vit_results = engine.train(model=pretrained_vit,
-                                          train_dataloader=train_dataloader_pretrained,
-                                          test_dataloader=test_dataloader_pretrained,
-                                          optimizer=optimizer,
-                                          loss_fn=loss_fn,
-                                          epochs=EPOCHS,
-                                          device=device)</code>
