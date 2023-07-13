@@ -24,6 +24,8 @@ if __name__ == '__main__':
         batch_size=32)
     pretrained_vit.heads = nn.Linear(in_features=768, out_features=len(class_names)).to(device)
 
+    #This part is responsible for training. If you have already trained your model, you can comment out this part.   
+    
     optimizer = torch.optim.Adam(params=pretrained_vit.parameters(),
                                  lr=1e-3)
     loss_fn = torch.nn.CrossEntropyLoss()
