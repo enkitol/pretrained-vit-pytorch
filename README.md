@@ -16,8 +16,10 @@
 
 
 
-This part is responsible for training. If you have already trained your model, you can comment out this part.
-<pre>    optimizer = torch.optim.Adam(params=pretrained_vit.parameters(),
+
+<pre>    #This part is responsible for training. If you have already trained your model, you can comment out this part.   
+  
+    optimizer = torch.optim.Adam(params=pretrained_vit.parameters(),
                                  lr=1e-3)
     loss_fn = torch.nn.CrossEntropyLoss()
     pretrained_vit_results = engine.train(model=pretrained_vit,
