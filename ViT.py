@@ -36,15 +36,21 @@ if __name__ == '__main__':
                                           loss_fn=loss_fn,
                                           epochs=EPOCHS,
                                           device=device)
+    
     utils.plot_loss_curves(pretrained_vit_results)
+
+    #Saves model to choosen directory with choosen name.
     utils.save_model(model=pretrained_vit,
                      target_dir="models",
                      model_name="vitmodel.pth")
-
+    
+    #Loads model from choosen directory.
     pretrained_vit.load_state_dict(torch.load("models/vitmodel.pth"))
     pretrained_vit.eval()
 
+    
     custom_image_path = image_path + "/47.jpg"
+    #Predicts the image
     predictions.pred_and_plot_image(model=pretrained_vit,
                                     image_path=custom_image_path,
                                     class_names=class_names)
