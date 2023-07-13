@@ -17,7 +17,7 @@
 
 
 
-<pre>    #This part is responsible for training. If you have already trained your model, you can comment out this part.   
+<pre>    #  This part is responsible for training. If you have already trained your model, you can comment out this part.
   
     optimizer = torch.optim.Adam(params=pretrained_vit.parameters(),
                                  lr=1e-3)
@@ -33,4 +33,21 @@
     utils.save_model(model=pretrained_vit,
                      target_dir="models",
                      model_name="vitmodel.pth")</pre>
+<pre>    #  Saves model to choosen directory with choosen name.
+  
+    utils.save_model(model=pretrained_vit,
+                     target_dir="models",
+                     model_name="vitmodel.pth")
+</pre>
 
+<pre>    #    Loads model from choosen directory.
+    
+    pretrained_vit.load_state_dict(torch.load("models/vitmodel.pth"))
+    pretrained_vit.eval()
+</pre>
+
+<pre>    #    Predicts the image
+    
+    predictions.pred_and_plot_image(model=pretrained_vit,
+                                    image_path=custom_image_path,
+                                    class_names=class_names)</pre>
