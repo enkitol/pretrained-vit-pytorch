@@ -24,7 +24,7 @@ if __name__ == '__main__':
         batch_size=32)
     pretrained_vit.heads = nn.Linear(in_features=768, out_features=len(class_names)).to(device)
 
-    #This part is responsible for training. If you have already trained your model, you can comment out this part.   
+    #    This part is responsible for training. If you have already trained your model, you can comment out this part.   
     
     optimizer = torch.optim.Adam(params=pretrained_vit.parameters(),
                                  lr=1e-3)
@@ -39,18 +39,21 @@ if __name__ == '__main__':
     
     utils.plot_loss_curves(pretrained_vit_results)
 
-    #Saves model to choosen directory with choosen name.
+    #    Saves model to choosen directory with choosen name.
+    
     utils.save_model(model=pretrained_vit,
                      target_dir="models",
                      model_name="vitmodel.pth")
     
-    #Loads model from choosen directory.
+    #    Loads model from choosen directory.
+    
     pretrained_vit.load_state_dict(torch.load("models/vitmodel.pth"))
     pretrained_vit.eval()
 
     
     custom_image_path = image_path + "/47.jpg"
-    #Predicts the image
+    #    Predicts the image
+    
     predictions.pred_and_plot_image(model=pretrained_vit,
                                     image_path=custom_image_path,
                                     class_names=class_names)
