@@ -1,1 +1,1 @@
-# class images for training.
+# Class images for training.
