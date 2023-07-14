@@ -2,7 +2,7 @@
 
   You can put the images you want to predict here.
   
-  Formattin should be:
+  For training and testing formattin should be:
   
   test/class 0<br />
   test/class 1
