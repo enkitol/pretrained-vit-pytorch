@@ -1,1 +1,1 @@
-# Put your class images for testing here.
+# You must place the images belonging to class 0 that you want to use for testing the model in this folder. 
