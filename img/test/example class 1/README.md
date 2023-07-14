@@ -1,1 +1,1 @@
-# class images for testing
+# Class images for testing
