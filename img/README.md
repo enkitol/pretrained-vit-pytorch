@@ -4,9 +4,9 @@
   
   Formattin should be:
   
-  test/cat<br />
-  test/dog
+  test/class 0<br />
+  test/class 1
 
-  train/cat<br />
-  train/dog
+  train/class 0<br />
+  train/class 1
   
