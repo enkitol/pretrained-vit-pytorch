@@ -9,10 +9,10 @@
 #    Usage
 
 <code>EPOCH: int
-</code>You can write the value of how many EPOCHs you want to train the model.
+</code>You can change the value of how many EPOCHs you want to train the model.
 
 <code>batch_size: int
-</code>The value should be 8 or its multiples. You can increase or decrease it based on the size of your data.
+</code>This value should be 8 or its multiples. You can increase or decrease it based on the size of your data.
 
 
 
