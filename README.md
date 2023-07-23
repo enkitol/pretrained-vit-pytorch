@@ -11,7 +11,7 @@
 <code>EPOCH: int
 </code>You can change the value of how many EPOCHs you want to train the model.
 
-<code>batch_size: int
+<code>BATCH_SIZE: int
 </code>This value should be 8 or its multiples. You can increase or decrease it based on the size of your data.
 
 
