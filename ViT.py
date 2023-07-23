@@ -8,7 +8,7 @@ image_path = "img"
 train_dir = image_path + "/train"
 test_dir = image_path + "/test"
 EPOCHS = 10
-
+BATCH_SIZE = 32
 if __name__ == '__main__':
 
     pretrained_vit_weights = torchvision.models.ViT_B_16_Weights.DEFAULT
@@ -21,7 +21,7 @@ if __name__ == '__main__':
         train_dir=train_dir,
         test_dir=test_dir,
         transform=pretrained_vit_transforms,
-        batch_size=32)
+        batch_size=BATCH_SIZE)
     pretrained_vit.heads = nn.Linear(in_features=768, out_features=len(class_names)).to(device)
 
     #    This part is responsible for training. If you have already trained your model, you can comment out this part.   
