@@ -33,7 +33,7 @@
     utils.save_model(model=pretrained_vit,
                      target_dir="models",
                      model_name="vitmodel.pth")</pre>
-<pre>    #  Saves model to choosen directory with choosen name.
+<pre>    #  Saves model to choosen directory with choosen name. If you have trained model, you can comment out this part and load that trained model instead.
   
     utils.save_model(model=pretrained_vit,
                      target_dir="models",
