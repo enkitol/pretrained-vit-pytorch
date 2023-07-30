@@ -1,6 +1,6 @@
 # img
 
-  You can place the images for which you want to make predictions here.
+  You can place the images which you want to make predictions here.
   
   For training and testing formattin should be:
   
